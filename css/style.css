@@ -1,0 +1,125 @@
+﻿
+body {
+    color: white;
+    font-size: 100%;
+    position: relative;
+    text-align: center;
+}
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h3 {
+    font-family: 'Dosis', sans-serif;
+    font-size: 1.5em;
+    color: #2BCDC1;
+}
+
+small {
+    color: white;
+}
+
+.colums {
+    width: 33%;
+}
+
+.for_animal_icons {
+    padding: 35px 25px;
+    background: #393E46;
+}
+
+.animal_icon {
+    width: 50%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.hover_for_romb {
+    width: 107px;
+    cursor: pointer;
+    margin: auto;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+    .hover_for_romb::after {
+        position: absolute;
+        width: 120px;
+        left: 4.8em;
+        top: 1.7em;
+    }
+
+    .hover_for_romb:hover {
+        animation: rotate;
+        animation-duration: 1s;
+    }
+
+
+.image-romb, .image-romb:after, .image-romb:before {
+    background: #F66095;
+}
+
+.image-romb {
+    height: 70px;
+    border-radius: 10px;
+    position: relative;
+    animation:rotate 1s;
+}
+
+    .image-romb:before {
+        position: absolute;
+        content: '';
+        height: 50px;
+        width: 63px;
+        top: -20px;
+        left: 21px;
+        border-radius: 12px;
+        transform: rotate(25.5deg) skew(-36deg);
+    }
+
+    .image-romb:after {
+        position: absolute;
+        content: '';
+        height: 50px;
+        width: 63px;
+        top: 41px;
+        left: 24px;
+        border-radius: 12px;
+        transform: rotate(25.9deg) skew(-36.7deg);
+    }
+
+    .image-romb img {
+        width: 55%;
+        position: absolute;
+        z-index: 9999999;
+        left: 27%;
+        top: 9%;
+    }
+
+/*MEDIA*/
+
+@media (max-width:910px) and (min-width:616px) {
+    .colums {
+        width: 49%;
+    }
+}
+
+@media (max-width:615px) {
+    .colums {
+        width: 100%;
+    }
+}
+
+/*KEYFRAMES*/
+
+@keyframes rotate {  
+    to {
+        transform: rotate(360deg);
+    }
+}
